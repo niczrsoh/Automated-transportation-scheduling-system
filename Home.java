@@ -30,7 +30,15 @@ public class Home {
         //Making menu and selection 
         switch(choice) {
             case 1:
-                
+                String[] busChoices = {"1. SSTF","2. CSCAN"};
+                for(String display: busChoices) System.out.println(display);
+                System.out.print("Enter your choice: ");
+                int bus= sc.nextInt();
+                clsr();
+                CSCAN cscan = new CSCAN();
+                if(bus==2) cscan.calculate(list, head);
+                waitsrc();
+                clsr();
                 break;
             case 2:
                 String[] taxiChoices = {"1. FCFS","2. SCAN"};
