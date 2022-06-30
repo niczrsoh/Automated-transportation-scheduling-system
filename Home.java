@@ -36,6 +36,8 @@ public class Home {
                 int bus= sc.nextInt();
                 clsr();
                 CSCAN cscan = new CSCAN();
+                SSTF sstf = new SSTF();
+                if(bus==1) sstf.calculate(list, head);
                 if(bus==2) cscan.calculate(list, head);
                 waitsrc();
                 clsr();
@@ -47,7 +49,12 @@ public class Home {
                 int taxi= sc.nextInt();
                 clsr();
                 FCFS fcfs = new FCFS();
+                SCAN scan = new SCAN();
                 if(taxi==1) fcfs.calculate(list, head);
+                else if(taxi==2){
+                    String direction = "left";
+                    scan.calculate(list,head,direction);
+                } 
                 waitsrc();
                 clsr();
                 break;
