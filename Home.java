@@ -99,6 +99,7 @@ public class Home {
                 clsr();
                 break;
             case 3:
+                clsr();
                 System.exit(0);
         }
     }

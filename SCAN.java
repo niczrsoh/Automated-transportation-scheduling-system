@@ -13,7 +13,12 @@ public class SCAN {
                         right = new Vector<Integer>();
         Vector<Integer> seek_sequence = new Vector<Integer>();
         Vector<Integer> seek_distance = new Vector<Integer>();
-     
+        
+        // Declaring ANSI_RESET so that we can reset the color
+        final String ANSI_RESET = "\u001B[37m";
+        // Declaring the background color
+        final String ANSI_GREEN_BACKGROUND = "\u001B[32m";
+        
         // appending end values
         // which has to be visited
         // before reversing the direction
@@ -83,9 +88,9 @@ public class SCAN {
                 direction = "left";
             }
         }
-     
+        
         System.out.print("Total distance  = "
-                            + totalDistance + "\n");
+                            + ANSI_GREEN_BACKGROUND  + totalDistance + ANSI_RESET +"\n");
         
         System.out.print("**Assume that distance between address'number' is 1km**\n");
 
@@ -96,7 +101,7 @@ public class SCAN {
         {
             for(int j = 0; j < arr.size(); j++){
                 if(seek_sequence.get(i) == arr.get(j).getAddress()){
-                    System.out.printf("%d. Kolej %s at address'%d'\n",count++,arr.get(j),seek_sequence.get(i));
+                    System.out.printf("%d. Kolej %s at address'%s %d %s'\n",count++,arr.get(j),ANSI_GREEN_BACKGROUND,seek_sequence.get(i),ANSI_RESET);
                 }
             }
         }

@@ -36,6 +36,11 @@ public class SSTF {
              
         // create array of objects of class node   
         node diff[] = new node[request.size()];
+
+        // Declaring ANSI_RESET so that we can reset the color
+        final String ANSI_RESET = "\u001B[37m";
+        // Declaring the background color
+        final String ANSI_GREEN_BACKGROUND = "\u001B[32m";
          
         // initialize array
         for (int i = 0; i < diff.length; i++)
@@ -66,8 +71,8 @@ public class SSTF {
          
         // for last accessed track
         seek_sequence[seek_sequence.length - 1] = head;
-         
-        System.out.println("Total distance  = "+ totalDistance);
+        
+        System.out.println("Total distance  = "+  ANSI_GREEN_BACKGROUND + totalDistance+  ANSI_RESET);
         
         System.out.print("**Assume that distance between address'number' is 1km**\n");
         System.out.println("The sequence of the track point is");
@@ -79,7 +84,7 @@ public class SSTF {
         for (int i = 0; i < seek_sequence.length; i++){
             for(int j = 0; j < seek.length; j++){
                 if(seek_sequence[i] == seek[j].getAddress()){
-                    System.out.printf("%d. Kolej %s at address'%d'\n",count++,seek[j],seek[j].getAddress());
+                    System.out.printf("%d. Kolej %s at address'%s%d%s'\n",count++,seek[j],ANSI_GREEN_BACKGROUND,seek[j].getAddress(), ANSI_RESET);
                     break;
                 }
             }
