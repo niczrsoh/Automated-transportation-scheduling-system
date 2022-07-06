@@ -59,10 +59,6 @@ public class CSCAN {
         System.out.println("Total distance = " + totalDistance);
         System.out.println("The sequence of the track point is ");
 
-        // remove the start point and end point in seek sequence while display the track point.
-        //seek_sequence.removeElementAt(6);
-        //seek_sequence.removeElementAt(6);
-
         int k =1;
         for(int i = 0; i < seek_sequence.size(); i++){
             for(int j = 0; j < arr.size(); j++){
