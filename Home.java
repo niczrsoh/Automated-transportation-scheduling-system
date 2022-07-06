@@ -1,6 +1,5 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 /*
 Automated transport scheduling system
 1. Soh Zen Ren A20EC0152
@@ -15,10 +14,27 @@ public class Home {
         //current position at the main gate UTM while the driver is stay at Taman Universiti
         int head = 5;
         int choice;
-        String[] kolejList={ "KTDI", "KTR", "KTF", "KTC", "KP", "K9K10",
+        String[] kolejArray={ "KTDI", "KTR", "KTF", "KTC", "KP", "K9K10",
             "KTHO", "KDOJ", "KDSE", "KRP"};
-        for(int i=0;i<kolejList.length;i++){
-            list.add(Station.valueOf(kolejList[i]));
+        List<String> kolejList = new ArrayList<String>(Arrays.asList(kolejArray));
+        //entering the number colleges that wish to be added
+        System.out.print("Number of colleges: ");
+        int num = sc.nextInt();
+        //input the college name into the array list
+        for(int i=0;i<num;i++){
+            String kolej;
+            while(true){
+            System.out.print("College: ");
+            kolej =sc.next().toUpperCase();
+            try{
+            if(!kolejList.contains(kolej))
+                throw new Exception("Does not have this College name! \nKindly enter again!");
+                break;}
+            catch(Exception e){
+                System.out.println(e.getMessage());
+            }}
+            //add the kolej to the list
+            list.add(Station.valueOf(kolej));
         }
         String[] choices = {"1. Bus","2. Taxi","3. Exit"};
     while(true) {
@@ -26,7 +42,6 @@ public class Home {
         System.out.print("Enter your choice: ");
         choice=sc.nextInt();
         clsr();
-      
         //Making menu and selection 
         switch(choice) {
             case 1:
