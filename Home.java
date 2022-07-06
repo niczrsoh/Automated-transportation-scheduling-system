@@ -24,8 +24,11 @@ public class Home {
         String[] kolejArray={ "KTDI", "KTR", "KTF", "KTC", "KP", "K9K10",
             "KTHO", "KDOJ", "KDSE", "KRP"};
         List<String> kolejList = new ArrayList<String>(Arrays.asList(kolejArray));
+        //display list of available colleges in UTM
+        System.out.println("---List of colleges in UTM---");
+        for (int i=0; i<kolejArray.length; i++)System.out.println(i+1+". "+kolejArray[i]);
         //entering the number colleges that wish to be added
-        System.out.print("Number of colleges: ");
+        System.out.print("Number of colleges added: ");
         int num = sc.nextInt();
         //input the college name into the array list
         for(int i=0;i<num;i++){
