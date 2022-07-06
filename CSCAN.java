@@ -60,13 +60,15 @@ public class CSCAN {
         System.out.println("The sequence of the track point is ");
 
         // remove the start point and end point in seek sequence while display the track point.
-        seek_sequence.removeElementAt(6);
-        seek_sequence.removeElementAt(6);
+        //seek_sequence.removeElementAt(6);
+        //seek_sequence.removeElementAt(6);
 
+        int k =1;
         for(int i = 0; i < seek_sequence.size(); i++){
-            for(int j = 0; j < seek_sequence.size(); j++){
+            for(int j = 0; j < arr.size(); j++){
                 if(seek_sequence.get(i) == arr.get(j).getDistance()){
-                    System.out.printf("%d. Kolej %s with distance %d km\n",i+1,arr.get(j),arr.get(j).getDistance());
+                    System.out.printf("%d. Kolej %s with distance %d km\n",k,arr.get(j),arr.get(j).getDistance());
+                    k++;
                 }
             }
         }
