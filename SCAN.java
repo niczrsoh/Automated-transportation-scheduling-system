@@ -86,7 +86,9 @@ public class SCAN {
      
         System.out.print("Total distance  = "
                             + totalDistance + "\n");
-     
+        
+        System.out.print("**Assume that distance between address'number' is 1km**\n");
+
         System.out.print("The sequence of the track point is" + "\n");
         
         int count =1;
@@ -94,7 +96,7 @@ public class SCAN {
         {
             for(int j = 0; j < arr.size(); j++){
                 if(seek_sequence.get(i) == arr.get(j).getAddress()){
-                    System.out.printf("%d. Kolej %s with distance %dkm from previous Kolej\n",count++,arr.get(j),seek_distance.get(i));
+                    System.out.printf("%d. Kolej %s at address'%d'\n",count++,arr.get(j),seek_sequence.get(i));
                 }
             }
         }

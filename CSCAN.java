@@ -57,13 +57,14 @@ public class CSCAN {
         }
 
         System.out.println("Total distance = " + totalDistance);
+        System.out.print("**Assume that distance between address'number' is 1km**\n");
         System.out.println("The sequence of the track point is ");
 
         int k =1;
         for(int i = 0; i < seek_sequence.size(); i++){
             for(int j = 0; j < arr.size(); j++){
                 if(seek_sequence.get(i) == arr.get(j).getAddress()){
-                    System.out.printf("%d. Kolej %s with distance %d km\n",k,arr.get(j),arr.get(j).getAddress());
+                    System.out.printf("%d. Kolej %s at address'%d'\n",k,arr.get(j),arr.get(j).getAddress());
                     k++;
                 }
             }
