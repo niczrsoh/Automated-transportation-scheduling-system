@@ -24,10 +24,10 @@ public class SCAN {
      
         for (int i = 0; i < arr.size(); i++)
         {
-            if (arr.get(i).getDistance() < head)
-                left.add(arr.get(i).getDistance());
-            if (arr.get(i).getDistance() > head)
-                right.add(arr.get(i).getDistance());
+            if (arr.get(i).getAddress() < head)
+                left.add(arr.get(i).getAddress());
+            if (arr.get(i).getAddress() > head)
+                right.add(arr.get(i).getAddress());
         }
      
         // sorting left and right vectors
@@ -93,7 +93,7 @@ public class SCAN {
         for (int i = 0; i < seek_sequence.size(); i++)
         {
             for(int j = 0; j < arr.size(); j++){
-                if(seek_sequence.get(i) == arr.get(j).getDistance()){
+                if(seek_sequence.get(i) == arr.get(j).getAddress()){
                     System.out.printf("%d. Kolej %s with distance %dkm from previous Kolej\n",count++,arr.get(j),seek_distance.get(i));
                 }
             }

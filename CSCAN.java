@@ -22,10 +22,10 @@ public class CSCAN {
         // find the distance that shorter than the current distance and add into left vector
         // find the distance that greater than the current distance and add into right vector
         for(int i = 0; i < arr.size(); i++){
-            if(arr.get(i).getDistance() < head)
-                left.add(arr.get(i).getDistance());
-            if(arr.get(i).getDistance() > head)
-                right.add(arr.get(i).getDistance());   
+            if(arr.get(i).getAddress() < head)
+                left.add(arr.get(i).getAddress());
+            if(arr.get(i).getAddress() > head)
+                right.add(arr.get(i).getAddress());   
         }
 
         // sort left and right vectors
@@ -62,8 +62,8 @@ public class CSCAN {
         int k =1;
         for(int i = 0; i < seek_sequence.size(); i++){
             for(int j = 0; j < arr.size(); j++){
-                if(seek_sequence.get(i) == arr.get(j).getDistance()){
-                    System.out.printf("%d. Kolej %s with distance %d km\n",k,arr.get(j),arr.get(j).getDistance());
+                if(seek_sequence.get(i) == arr.get(j).getAddress()){
+                    System.out.printf("%d. Kolej %s with distance %d km\n",k,arr.get(j),arr.get(j).getAddress());
                     k++;
                 }
             }

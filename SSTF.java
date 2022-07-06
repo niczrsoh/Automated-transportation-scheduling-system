@@ -9,7 +9,7 @@ public class SSTF {
                                          
     {
         for (int i = 0; i < diff.length; i++)
-            diff[i].distance = Math.abs(queue.get(i).getDistance() - head);
+            diff[i].distance = Math.abs(queue.get(i).getAddress() - head);
     }
  
     // find unaccessed track
@@ -61,7 +61,7 @@ public class SSTF {
             totalDistance += diff[index].distance;
              
             // accessed track is now new head
-            head = request.get(index).getDistance();
+            head = request.get(index).getAddress();
         }
          
         // for last accessed track
@@ -76,8 +76,8 @@ public class SSTF {
         // print the sequence
         for (int i = 0; i < seek_sequence.length; i++){
             for(int j = 0; j < seek.length; j++){
-                if(seek_sequence[i] == seek[j].getDistance()){
-                    System.out.printf("%d. Kolej %s with distance %d km\n",i+1,seek[j],seek[j].getDistance());
+                if(seek_sequence[i] == seek[j].getAddress()){
+                    System.out.printf("%d. Kolej %s with distance %d km\n",i+1,seek[j],seek[j].getAddress());
                     break;
                 }
             }

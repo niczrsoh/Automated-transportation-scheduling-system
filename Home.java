@@ -15,7 +15,7 @@ public class Home {
         //current position at the main gate UTM while the driver is stay at Taman Universiti
         int head = 5;
         int choice;
-        String[] purposes={"To show the concept of the disk scheduling algorithm and how it is being applied in the real world application.",
+        String[] purposes={"To show the concept of the disk scheduling algorithms and how they are being applied in the real world application.",
         "To compare disk scheduling algorithms that apply the real world application "};
         System.out.println("\033[0;1m" +"System's purposes: ");
         for (int i=0; i<purposes.length; i++)System.out.println(i+1+". "+purposes[i]);
@@ -46,14 +46,17 @@ public class Home {
             //add the kolej to the list
             list.add(Station.valueOf(kolej));
         } 
-        clsr();
         waitsrc();
+        clsr();
+       
         String[] choices = {"1. Bus","2. Taxi","3. Exit"};
     while(true) {
+        System.out.println("---Please enter the number of transport you want---");
         for(String display: choices) System.out.println(display);
         System.out.print("Enter your choice: ");
         choice=sc.nextInt();
         clsr();
+        System.out.println("---Please enter the number of algorithm that you want to calculate---");
         //Making menu and selection 
         switch(choice) {
             case 1:
