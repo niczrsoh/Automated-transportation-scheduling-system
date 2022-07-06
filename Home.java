@@ -9,11 +9,18 @@ Automated transport scheduling system
 //Home Page!!
 public class Home {
     public static void main(String[] args){
+        displaySystem();
         Scanner sc =new Scanner(System.in);
         ArrayList<Station> list= new ArrayList<Station>();
         //current position at the main gate UTM while the driver is stay at Taman Universiti
         int head = 5;
         int choice;
+        String[] purposes={"To show the concept of the disk scheduling algorithm and how it is being applied in the real world application.",
+        "To compare disk scheduling algorithms that apply the real world application "};
+        System.out.println("\033[0;1m" +"System's purposes: ");
+        for (int i=0; i<purposes.length; i++)System.out.println(i+1+". "+purposes[i]);
+        waitsrc();
+        clsr();
         String[] kolejArray={ "KTDI", "KTR", "KTF", "KTC", "KP", "K9K10",
             "KTHO", "KDOJ", "KDSE", "KRP"};
         List<String> kolejList = new ArrayList<String>(Arrays.asList(kolejArray));
@@ -35,7 +42,9 @@ public class Home {
             }}
             //add the kolej to the list
             list.add(Station.valueOf(kolej));
-        }
+        } 
+        clsr();
+        waitsrc();
         String[] choices = {"1. Bus","2. Taxi","3. Exit"};
     while(true) {
         for(String display: choices) System.out.println(display);
@@ -98,5 +107,10 @@ public class Home {
             }  
             catch(Exception e)
             {} 
+      }
+      public static void displaySystem() {
+        System.out.println("=========================================================");
+        System.out.println("\tAUTOMATED TRANSPORTATION SCHEDULING SYSTEM");
+        System.out.println("=========================================================");
       }
 }
