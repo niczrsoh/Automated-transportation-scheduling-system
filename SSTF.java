@@ -67,17 +67,19 @@ public class SSTF {
         // for last accessed track
         seek_sequence[seek_sequence.length - 1] = head;
          
-        System.out.println("Total number of seek operations = "
-                                                     + totalDistance);
-                                                      
-        System.out.println("Seek Sequence is");
+        System.out.println("Total distance  = "+ totalDistance);
+        
+        System.out.print("**Assume that distance between address'number' is 1km**\n");
+        System.out.println("The sequence of the track point is");
         
         Station[] seek = Station.values();
         // print the sequence
+
+        int count = 1;
         for (int i = 0; i < seek_sequence.length; i++){
             for(int j = 0; j < seek.length; j++){
                 if(seek_sequence[i] == seek[j].getDistance()){
-                    System.out.printf("%d. Kolej %s with distance %d km\n",i+1,seek[j],seek[j].getDistance());
+                    System.out.printf("%d. Kolej %s at address'%d'\n",count++,seek[j],seek[j].getDistance());
                     break;
                 }
             }

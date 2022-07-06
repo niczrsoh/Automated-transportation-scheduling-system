@@ -28,8 +28,18 @@ public class Home {
         System.out.println("---List of colleges in UTM---");
         for (int i=0; i<kolejArray.length; i++)System.out.println(i+1+". "+kolejArray[i]);
         //entering the number colleges that wish to be added
-        System.out.print("Number of colleges added: ");
-        int num = sc.nextInt();
+        int num=2;
+        while(true){
+            System.out.print("Number of colleges added: ");
+            num = sc.nextInt();
+            if (num<2 || num>10){
+                System.out.println("Please input a valid number from 2 to 10 only. ");
+            }
+            else{
+                break;
+            }
+        }
+
         //input the college name into the array list
         for(int i=0;i<num;i++){
             String kolej;
