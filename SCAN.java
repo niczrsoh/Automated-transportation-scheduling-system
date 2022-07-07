@@ -89,12 +89,11 @@ public class SCAN {
             }
         }
         
+        System.out.println("---Public Transportation TAXI using SCAN Alogorithm---");
+        System.out.println("**Assume that distance between address'number' is 1km**\n");
         System.out.print("Total distance  = "
                             + ANSI_GREEN_BACKGROUND  + totalDistance + ANSI_RESET +"\n");
-        
-        System.out.print("**Assume that distance between address'number' is 1km**\n");
-
-        System.out.print("The sequence of the track point is" + "\n");
+        System.out.print("\nThe sequence of the track point is" + "\n");
         
         int count =1;
         for (int i = 0; i < seek_sequence.size(); i++)

@@ -44,7 +44,7 @@ public class Home {
         for(int i=0;i<num;i++){
             String kolej;
             while(true){
-            System.out.print("College: ");
+            System.out.print("College " + (i+1) + ": ");
             kolej =sc.next().toUpperCase();
             try{
             if(!kolejList.contains(kolej))

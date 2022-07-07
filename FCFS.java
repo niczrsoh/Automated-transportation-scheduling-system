@@ -19,10 +19,10 @@ public void calculate(ArrayList<Station> arr, int head){
         totalDistance += distance;
         head = track;
     }
-    
+    System.out.println("---Public Transportation TAXI using FCFS Alogorithm---");
+    System.out.println("**Assume that distance between address'number' is 1km**\n");
     System.out.println("Total distance: "+ ANSI_GREEN_BACKGROUND + totalDistance+  ANSI_RESET);
-    System.out.print("**Assume that distance between address'number' is 1km**\n");
-    System.out.println("The sequence of the track point is");
+    System.out.println("\nThe sequence of the track point is");
     for (int i = 0; i < arr.size(); i++)System.out.printf("%d. Kolej %s at address'%s%d%s'\n",i+1,arr.get(i),ANSI_GREEN_BACKGROUND,arr.get(i).getAddress(),ANSI_RESET);
 }
 }

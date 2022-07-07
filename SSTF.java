@@ -71,11 +71,11 @@ public class SSTF {
          
         // for last accessed track
         seek_sequence[seek_sequence.length - 1] = head;
-        
+
+        System.out.println("---Public Transportation BUS using SSTF Alogorithm---");
+        System.out.println("**Assume that distance between address'number' is 1km**\n");
         System.out.println("Total distance  = "+  ANSI_GREEN_BACKGROUND + totalDistance+  ANSI_RESET);
-        
-        System.out.print("**Assume that distance between address'number' is 1km**\n");
-        System.out.println("The sequence of the track point is");
+        System.out.println("\nThe sequence of the track point is");
         
         Station[] seek = Station.values();
         // print the sequence

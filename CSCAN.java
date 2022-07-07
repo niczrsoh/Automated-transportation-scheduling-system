@@ -60,10 +60,10 @@ public class CSCAN {
             totalDistance += distance;
             head = track;
         }
-        
+        System.out.println("---Public Transportation BUS using CSCAN Alogorithm---");
+        System.out.println("**Assume that distance between address'number' is 1km**\n");
         System.out.println("Total distance = " + ANSI_GREEN_BACKGROUND + totalDistance+  ANSI_RESET);
-        System.out.print("**Assume that distance between address'number' is 1km**\n");
-        System.out.println("The sequence of the track point is ");
+        System.out.println("\nThe sequence of the track point is ");
 
         int k =1;
         for(int i = 0; i < seek_sequence.size(); i++){
